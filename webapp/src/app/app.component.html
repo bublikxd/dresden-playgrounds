@@ -1,3 +1,13 @@
 <app-toolbar></app-toolbar>
 
-<h3>TEst 3</h3>
+<mat-sidenav-container class="sidebar-container">
+    <mat-sidenav #sidenav class="sidebar">
+      <h2>Filter</h2>
+    </mat-sidenav>
+
+    <div class="main-content">
+      <button type="button" mat-button (click)="sidenav.open()">
+        Show Filter
+      </button>
+    </div>
+</mat-sidenav-container>
