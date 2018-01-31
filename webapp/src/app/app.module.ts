@@ -7,13 +7,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 import { AppComponent } from './app.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ToolbarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
