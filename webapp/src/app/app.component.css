@@ -14,7 +14,7 @@
     grid-area: header;
 }
 
-.menu {
+.nav {
     background-color: #dddddd;
     grid-area: nav;
 }
