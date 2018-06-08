@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data/data.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  places: any;
+  dataLoading: boolean;
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.getPlaces();
+  }
+
+  getPlaces() {
+    this.dataLoading = true;
+    this.dataService.getPlayPlaces().subscribe(data => {
+      this.places = data;
+      console.log(data);
+      this.dataLoading = false;
+    });
   }
 
 }
