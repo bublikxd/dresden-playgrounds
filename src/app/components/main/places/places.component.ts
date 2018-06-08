@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Feature } from '../../../models/feature.model';
 
 @Component({
   selector: 'app-places',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./places.component.scss']
 })
 export class PlacesComponent implements OnInit {
+
+  @Input() places: Feature[];
 
   constructor() { }
 
