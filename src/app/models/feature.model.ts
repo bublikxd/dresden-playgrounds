@@ -3,6 +3,6 @@ import { Property } from './property.model';
 
 export class Feature {
   type: string;
-  properties: Property[];
+  properties: Property;
   geometry: Geometry;
 }
