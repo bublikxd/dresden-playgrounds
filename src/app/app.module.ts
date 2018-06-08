@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,7 @@ import { ImprintComponent } from './components/imprint/imprint.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DescriptionComponent } from './components/main/description/description.component';
+import { DataService } from './services/data/data.service';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,13 @@ import { DescriptionComponent } from './components/main/description/description.
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
