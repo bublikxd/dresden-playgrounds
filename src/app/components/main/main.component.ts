@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Feature } from '../../models/feature.model';
 import { DataService } from '../../services/data/data.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { DataService } from '../../services/data/data.service';
 })
 export class MainComponent implements OnInit {
 
-  places: any;
+  places: Feature[];
   dataLoading: boolean;
 
   constructor(private dataService: DataService) { }
@@ -20,8 +21,7 @@ export class MainComponent implements OnInit {
   getPlaces() {
     this.dataLoading = true;
     this.dataService.getPlayPlaces().subscribe(data => {
-      this.places = data;
-      console.log(data);
+      this.places = data.features;
       this.dataLoading = false;
     });
   }

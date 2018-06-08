@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { Place } from '../../models/place.model';
+import { PlacesData } from '../../models/places-data.model';
 
 @Injectable()
 export class DataService {
@@ -10,7 +10,7 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getPlayPlaces(): Observable<Place> {
-    return this.httpClient.get(this.dataUrl);
+  getPlayPlaces(): Observable<PlacesData> {
+    return this.httpClient.get<PlacesData>(this.dataUrl);
   }
 }
