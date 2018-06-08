@@ -15,6 +15,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DescriptionComponent } from './components/main/description/description.component';
 import { DataService } from './services/data/data.service';
+import { PlacesComponent } from './components/main/places/places.component';
+import { PlaceItemComponent } from './components/main/place-item/place-item.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { DataService } from './services/data/data.service';
     ImprintComponent,
     ContactComponent,
     FooterComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    PlacesComponent,
+    PlaceItemComponent
   ],
   imports: [
     BrowserModule,
