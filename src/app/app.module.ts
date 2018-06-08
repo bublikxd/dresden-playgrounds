@@ -1,4 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -35,7 +36,8 @@ import { PlaceItemComponent } from './components/main/place-item/place-item.comp
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [
     DataService
