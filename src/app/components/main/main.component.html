@@ -1,2 +1,19 @@
 <app-description></app-description>
-<app-places [places]="places"></app-places>
+<div class="switch-buttons">
+  <button mat-raised-button color="primary"
+          *ngIf="viewType === cardView"
+          (click)="viewType = mapView">
+    <mat-icon aria-label="Map view button">map</mat-icon> Switch to map view
+  </button>
+  <button mat-raised-button color="primary"
+          *ngIf="viewType === mapView"
+          (click)="viewType = cardView">
+    <mat-icon aria-label="Card view button">view_agenda</mat-icon> Switch to card view
+  </button>
+</div>
+<ng-container *ngIf="viewType === cardView">
+  <app-places [places]="places"></app-places>
+</ng-container>
+<ng-container *ngIf="viewType === mapView">
+  <app-map-view></app-map-view>
+</ng-container>

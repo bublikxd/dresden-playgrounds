@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewType } from '../../enums/view-type.enum';
 import { Feature } from '../../models/feature.model';
 import { DataService } from '../../services/data/data.service';
 
@@ -11,6 +12,11 @@ export class MainComponent implements OnInit {
 
   places: Feature[];
   dataLoading: boolean;
+
+  cardView: string = ViewType.CardView;
+  mapView: string = ViewType.MapView;
+
+  viewType: string = this.cardView;
 
   constructor(private dataService: DataService) { }
 
