@@ -18,6 +18,7 @@ import { DescriptionComponent } from './components/main/description/description.
 import { DataService } from './services/data/data.service';
 import { PlacesComponent } from './components/main/places/places.component';
 import { PlaceItemComponent } from './components/main/place-item/place-item.component';
+import { MapViewComponent } from './components/main/map-view/map-view.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PlaceItemComponent } from './components/main/place-item/place-item.comp
     FooterComponent,
     DescriptionComponent,
     PlacesComponent,
-    PlaceItemComponent
+    PlaceItemComponent,
+    MapViewComponent
   ],
   imports: [
     BrowserModule,
