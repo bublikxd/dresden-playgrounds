@@ -1,3 +1,8 @@
-<div class="places">
-  <app-place-item *ngFor="let place of places" [place]="place"></app-place-item>
-</div>
+<ng-container *ngIf="places && places.length !== 0">
+  <div class="places">
+    <app-place-item *ngFor="let place of places | slice:sliceStart:sliceEnd" [place]="place"></app-place-item>
+  </div>
+  <mat-paginator [length]="places.length"
+                 [pageSize]="pageSize"
+                 (page)="getPageEvent($event)"></mat-paginator>
+</ng-container>
