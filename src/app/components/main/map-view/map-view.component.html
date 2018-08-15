@@ -1,6 +1,7 @@
 <ng-container *ngIf="places && places.length !== 0">
   <div class="leaflet-map"
        leaflet
-       [leafletOptions]="options">
+       [leafletOptions]="options"
+       [leafletLayers]="markers">
   </div>
 </ng-container>
