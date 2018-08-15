@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -43,7 +44,8 @@ import { MapViewComponent } from './components/main/map-view/map-view.component'
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    LeafletModule.forRoot()
   ],
   providers: [
     DataService

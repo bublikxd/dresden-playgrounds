@@ -15,5 +15,5 @@
   <app-places [places]="places"></app-places>
 </ng-container>
 <ng-container *ngIf="viewType === mapView">
-  <app-map-view></app-map-view>
+  <app-map-view [places]="places"></app-map-view>
 </ng-container>
